@@ -15,7 +15,6 @@ function toggleDarkMode() {
     }
 }
 
-// Simpan tema setelah reload
 document.addEventListener("DOMContentLoaded", () => {
     if (localStorage.getItem("theme") === "light") {
         document.body.classList.add("light-mode");
@@ -23,9 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Player Count Live
 function updatePlayerCount() {
-    fetch("https://api.example.com/playercount")  // Ganti dengan API server SAMP
+    fetch("https://api.example.com/playercount") 
         .then(response => response.json())
         .then(data => {
             document.getElementById("player-count").textContent = data.players;
@@ -35,6 +33,5 @@ function updatePlayerCount() {
         });
 }
 
-// Perbarui setiap 30 detik
 setInterval(updatePlayerCount, 30000);
 updatePlayerCount();
