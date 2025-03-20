@@ -1,9 +1,9 @@
-/* General Reset */
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -15,10 +15,10 @@ body {
 
 /* Dark Mode Variables */
 :root {
-    --bg: #f5f5f5;
+    --bg: #f9f9f9;
     --text: #222;
-    --header: #333;
-    --btn-bg: #0088ff;
+    --header: #282828;
+    --btn-bg: #ff4500;
     --btn-text: #fff;
 }
 
@@ -30,7 +30,8 @@ body {
 
 /* Header */
 header {
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     background: var(--header);
     color: #fff;
@@ -42,7 +43,7 @@ header {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
 }
 
@@ -74,11 +75,11 @@ nav {
 /* Menu Toggle (Mobile) */
 .menu-toggle {
     display: none;
+    font-size: 2rem;
+    cursor: pointer;
     background: none;
     border: none;
     color: #fff;
-    font-size: 1.8rem;
-    cursor: pointer;
 }
 
 .dark-mode-toggle {
@@ -92,14 +93,18 @@ nav {
 /* Hero Section */
 #hero {
     text-align: center;
-    padding: 100px 20px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: url('hero-bg.jpg') center/cover no-repeat;
     color: #fff;
 }
 
 .hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .hero-content .btn {
@@ -109,12 +114,12 @@ nav {
     color: var(--btn-text);
     text-decoration: none;
     font-size: 1.2rem;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: 0.3s;
 }
 
 .hero-content .btn:hover {
-    background: #0066cc;
+    background: #cc3700;
 }
 
 /* Responsive */
