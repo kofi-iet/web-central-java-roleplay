@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Java Roleplay</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Central Java Roleplay</h1>
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links">
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#features">Fitur</a></li>
+                <li><a href="#join">Cara Bergabung</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <section id="banner">
+        <div class="banner-content">
+            <h2>Selamat Datang di Central Java Roleplay</h2>
+            <p>Server GTA SAMP Roleplay terbaik dengan komunitas seru dan realistis!</p>
+            <button onclick="joinServer()">Bergabung Sekarang</button>
+        </div>
+    </section>
+
+    <section id="features">
+        <h2>Fitur Unggulan</h2>
+        <div class="features-container">
+            <div class="feature">
+                <h3>Roleplay Realistis</h3>
+                <p>Pengalaman roleplay yang mendalam dengan sistem ekonomi dan hukum yang nyata.</p>
+            </div>
+            <div class="feature">
+                <h3>Pekerjaan Variatif</h3>
+                <p>Pilih berbagai profesi seperti polisi, dokter, mekanik, dan lainnya.</p>
+            </div>
+            <div class="feature">
+                <h3>Komunitas Aktif</h3>
+                <p>Gabung dengan komunitas ramah dan aktif setiap hari.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="join">
+        <h2>Cara Bergabung</h2>
+        <ol>
+            <li>Download dan install GTA San Andreas.</li>
+            <li>Install SA-MP (San Andreas Multiplayer).</li>
+            <li>Masukkan IP server: <strong>123.456.78.90:7777</strong></li>
+            <li>Gabung ke Discord kami untuk informasi lebih lanjut.</li>
+        </ol>
+        <button onclick="redirectToDiscord()">Gabung Discord</button>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2025 Central Java Roleplay | Hubungi kami di <a href="#">Discord</a></p>
+    </footer>
+</body>
+</html>
