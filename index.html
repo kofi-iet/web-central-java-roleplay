@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Central Java Roleplay</h1>
+        <div class="logo">Central Java RP</div>
         <nav>
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul class="nav-links">
@@ -18,14 +18,16 @@
                 <li><a href="#join">Cara Bergabung</a></li>
                 <li><a href="#contact">Kontak</a></li>
             </ul>
+            <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
         </nav>
     </header>
 
     <section id="banner">
         <div class="banner-content">
-            <h2>Selamat Datang di Central Java Roleplay</h2>
-            <p>Server GTA SAMP Roleplay terbaik dengan komunitas seru dan realistis!</p>
-            <button onclick="joinServer()">Bergabung Sekarang</button>
+            <h1>Central Java Roleplay</h1>
+            <p>Server GTA SAMP dengan pengalaman roleplay paling realistis!</p>
+            <p><strong>Player Online: <span id="player-count">Loading...</span></strong></p>
+            <a href="#join" class="btn">Bergabung Sekarang</a>
         </div>
     </section>
 
@@ -33,33 +35,36 @@
         <h2>Fitur Unggulan</h2>
         <div class="features-container">
             <div class="feature">
+                <i class="icon">🎭</i>
                 <h3>Roleplay Realistis</h3>
-                <p>Pengalaman roleplay yang mendalam dengan sistem ekonomi dan hukum yang nyata.</p>
+                <p>Ekonomi dinamis, sistem hukum, dan pengalaman roleplay mendalam.</p>
             </div>
             <div class="feature">
+                <i class="icon">🚔</i>
                 <h3>Pekerjaan Variatif</h3>
-                <p>Pilih berbagai profesi seperti polisi, dokter, mekanik, dan lainnya.</p>
+                <p>Jadilah polisi, dokter, mekanik, pebisnis, atau kriminal.</p>
             </div>
             <div class="feature">
+                <i class="icon">🌍</i>
                 <h3>Komunitas Aktif</h3>
-                <p>Gabung dengan komunitas ramah dan aktif setiap hari.</p>
+                <p>Gabung dalam komunitas yang ramah dan selalu aktif.</p>
             </div>
         </div>
     </section>
 
     <section id="join">
         <h2>Cara Bergabung</h2>
-        <ol>
-            <li>Download dan install GTA San Andreas.</li>
-            <li>Install SA-MP (San Andreas Multiplayer).</li>
-            <li>Masukkan IP server: <strong>123.456.78.90:7777</strong></li>
-            <li>Gabung ke Discord kami untuk informasi lebih lanjut.</li>
-        </ol>
-        <button onclick="redirectToDiscord()">Gabung Discord</button>
+        <div class="steps">
+            <div class="step">1. Install GTA San Andreas</div>
+            <div class="step">2. Install SA-MP (San Andreas Multiplayer)</div>
+            <div class="step">3. Masukkan IP: <strong>123.456.78.90:7777</strong></div>
+            <div class="step">4. Gabung ke <a href="#">Discord</a> kami</div>
+        </div>
+        <a href="#" class="btn">Gabung Discord</a>
     </section>
 
     <footer id="contact">
-        <p>&copy; 2025 Central Java Roleplay | Hubungi kami di <a href="#">Discord</a></p>
+        <p>&copy; 2025 Central Java Roleplay | <a href="#">Discord</a></p>
     </footer>
 </body>
 </html>
