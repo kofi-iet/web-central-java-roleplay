@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function updatePlayerCount() {
-    fetch("https://play-servers.com/web/online-9495.js") 
+    fetch("https://play-servers.com/web/9495.json") 
         .then(response => response.json())
         .then(data => {
             document.getElementById("player-count").textContent = data.players;
