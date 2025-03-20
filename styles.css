@@ -1,40 +1,54 @@
-/* Reset */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Arial', sans-serif;
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: #121212;
-    color: white;
-    text-align: center;
+    background-color: var(--bg);
+    color: var(--text);
     transition: background 0.3s, color 0.3s;
 }
 
-body.light-mode {
-    background-color: #f4f4f4;
-    color: black;
+/* Dark Mode Variables */
+:root {
+    --bg: #f5f5f5;
+    --text: #222;
+    --header: #333;
+    --btn-bg: #0088ff;
+    --btn-text: #fff;
 }
 
+.dark-mode {
+    --bg: #121212;
+    --text: #fff;
+    --header: #1c1c1c;
+}
+
+/* Header */
 header {
+    position: sticky;
+    top: 0;
+    background: var(--header);
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #222;
     padding: 15px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
     z-index: 1000;
 }
 
 .logo {
-    font-size: 22px;
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #f04e30;
+}
+
+nav {
+    display: flex;
+    align-items: center;
 }
 
 .nav-links {
@@ -47,51 +61,63 @@ header {
 }
 
 .nav-links a {
-    color: white;
     text-decoration: none;
-    font-size: 16px;
-    transition: 0.3s ease-in-out;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #f04e30;
+    color: var(--btn-bg);
 }
 
+/* Menu Toggle (Mobile) */
 .menu-toggle {
     display: none;
     background: none;
     border: none;
-    color: white;
-    font-size: 24px;
+    color: #fff;
+    font-size: 1.8rem;
     cursor: pointer;
 }
 
 .dark-mode-toggle {
     background: none;
     border: none;
-    font-size: 20px;
-    color: white;
+    font-size: 1.5rem;
     cursor: pointer;
     margin-left: 15px;
 }
 
-.btn {
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('hero-bg.jpg') center/cover no-repeat;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content .btn {
     display: inline-block;
-    background: #f04e30;
-    color: white;
     padding: 12px 25px;
-    border-radius: 5px;
+    background: var(--btn-bg);
+    color: var(--btn-text);
     text-decoration: none;
-    font-size: 16px;
-    margin-top: 15px;
-    transition: 0.3s ease-in-out;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
-.btn:hover {
-    background: #c03b24;
-    transform: scale(1.05);
+.hero-content .btn:hover {
+    background: #0066cc;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -101,9 +127,9 @@ header {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 50px;
+        top: 60px;
         right: 0;
-        background: #333;
+        background: var(--header);
         width: 200px;
         padding: 10px;
     }
