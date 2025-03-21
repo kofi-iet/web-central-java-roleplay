@@ -1,145 +1,127 @@
-/* Reset CSS */
+/* Reset dasar */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
 }
 
+/* Warna tema */
 body {
-    background-color: var(--bg);
-    color: var(--text);
-    transition: background 0.3s, color 0.3s;
-}
-
-/* Dark Mode Variables */
-:root {
-    --bg: #f9f9f9;
-    --text: #222;
-    --header: #282828;
-    --btn-bg: #ff4500;
-    --btn-text: #fff;
-}
-
-.dark-mode {
-    --bg: #121212;
-    --text: #fff;
-    --header: #1c1c1c;
+    background: #121212;
+    color: #fff;
 }
 
 /* Header */
 header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background: var(--header);
-    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
+    background: #1E1E1E;
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 
+/* Logo */
 .logo {
-    font-size: 1.8rem;
+    font-size: 20px;
     font-weight: bold;
 }
 
+/* Navigasi */
 nav {
     display: flex;
     align-items: center;
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
+    list-style: none;
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #fff;
-    font-weight: bold;
-    transition: color 0.3s;
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
-    color: var(--btn-bg);
+    color: #4CAF50;
 }
 
-/* Menu Toggle (Mobile) */
-.menu-toggle {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: #fff;
-}
-
+/* Tombol Dark Mode */
 .dark-mode-toggle {
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 20px;
     cursor: pointer;
-    margin-left: 15px;
 }
 
 /* Hero Section */
 #hero {
     text-align: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url('hero-bg.jpg') center/cover no-repeat;
-    color: #fff;
+    padding: 50px 20px;
 }
 
-.hero-content h1 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.hero-content .btn {
+.btn {
     display: inline-block;
-    padding: 12px 25px;
-    background: var(--btn-bg);
-    color: var(--btn-text);
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #4CAF50;
+    color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 8px;
+    border-radius: 5px;
     transition: 0.3s;
 }
 
-.hero-content .btn:hover {
-    background: #cc3700;
+.btn:hover {
+    background: #388E3C;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
+/* Fitur */
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: var(--header);
-        width: 200px;
-        padding: 10px;
-    }
+.feature {
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 250px;
+}
 
-    .nav-links.active {
-        display: flex;
-    }
+.icon {
+    font-size: 30px;
+}
+
+/* Cara Bergabung */
+.join-steps {
+    list-style: none;
+    padding: 20px;
+}
+
+.join-steps li {
+    background: #222;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #1E1E1E;
+    margin-top: 20px;
 }
