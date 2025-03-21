@@ -10,6 +10,7 @@
 body {
     background: #121212;
     color: #fff;
+    transition: background 0.3s, color 0.3s;
 }
 
 /* Header */
