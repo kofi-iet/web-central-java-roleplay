@@ -21,16 +21,3 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
         }
     });
 });
-
-// Fetch Jumlah Pemain
-async function fetchPlayerCount() {
-    try {
-        let response = await fetch('https://api.samp-server.com/?ip=yourserverip&port=yourserverport');
-        let data = await response.json();
-        document.querySelector("#player-count span").textContent = data.players;
-    } catch (error) {
-        document.querySelector("#player-count span").textContent = "Tidak tersedia";
-    }
-}
-
-fetchPlayerCount();
