@@ -69,6 +69,13 @@ nav ul li a:hover {
     transition: 0.3s;
 }
 
+/* Section */
+section {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 /* Responsif */
 @media (max-width: 768px) {
     nav ul {
@@ -87,24 +94,12 @@ nav ul li a:hover {
         display: flex;
     }
 
-    nav ul li {
-        margin: 10px 0;
-    }
-
     #hamburger {
         display: flex;
     }
 
-    #hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    #hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    #hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
+    section {
+        padding: 80px 15px;
     }
 }
 
