@@ -1,4 +1,4 @@
-/* Reset default margin dan padding */
+/* Reset dasar */
 * {
     margin: 0;
     padding: 0;
@@ -6,14 +6,14 @@
     font-family: Arial, sans-serif;
 }
 
-/* Gaya dasar untuk halaman */
+/* Gaya dasar */
 body {
     background-color: #1a1a1a;
     color: #fff;
     text-align: center;
 }
 
-/* Header */
+/* Header & Navigasi */
 header {
     background-color: #222;
     padding: 15px 0;
@@ -22,6 +22,11 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
 
 header h1 {
@@ -48,9 +53,12 @@ nav ul li a:hover {
     color: #fff;
 }
 
-/* Section styling */
+/* Section */
 section {
     padding: 100px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 #home {
@@ -79,13 +87,29 @@ section {
     text-decoration: none;
     font-size: 18px;
     border-radius: 5px;
+    display: inline-block;
+    transition: 0.3s;
 }
 
 .btn:hover {
     background-color: #e6b800;
 }
 
-/* Footer */
+/* Fitur */
+.features-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature-item {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+}
+
 footer {
     background-color: #222;
     padding: 15px 0;
