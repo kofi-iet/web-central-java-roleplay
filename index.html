@@ -5,49 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Central Java Roleplay</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
+
+    <!-- Header & Navigasi -->
     <header>
-        <h1>Central Java Roleplay</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#about">Tentang</a></li>
-                <li><a href="#features">Fitur</a></li>
-                <li><a href="#join">Bergabung</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Central Java Roleplay</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#about">Tentang</a></li>
+                    <li><a href="#features">Fitur</a></li>
+                    <li><a href="#join">Bergabung</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
+    <!-- Beranda -->
     <section id="home">
-        <h2>Selamat Datang di Central Java Roleplay</h2>
-        <p>Komunitas SAMP Roleplay dengan pengalaman bermain yang realistis dan seru.</p>
-        <a href="samp://yourserverip:port" class="btn">Gabung Sekarang</a>
+        <div class="container">
+            <h2>Selamat Datang di Central Java Roleplay</h2>
+            <p>Komunitas SAMP Roleplay dengan pengalaman bermain yang realistis dan seru.</p>
+            <a href="samp://yourserverip:port" class="btn">Gabung ke Server</a>
+            <p id="player-count">Pemain Online: <span>Memuat...</span></p>
+        </div>
     </section>
 
+    <!-- Tentang Kami -->
     <section id="about">
-        <h2>Tentang Kami</h2>
-        <p>Central Java Roleplay adalah server SAMP dengan konsep roleplay yang mendalam.</p>
+        <div class="container">
+            <h2>Tentang Kami</h2>
+            <p>Central Java Roleplay adalah server SAMP yang menawarkan pengalaman roleplay realistis dengan sistem ekonomi seimbang, fraksi yang aktif, dan komunitas yang solid.</p>
+        </div>
     </section>
 
+    <!-- Fitur Unggulan -->
     <section id="features">
-        <h2>Fitur Unggulan</h2>
-        <ul>
-            <li>Roleplay realistis</li>
-            <li>Ekonomi yang seimbang</li>
-            <li>Sistem fraksi dan bisnis</li>
-            <li>Tim admin yang responsif</li>
-        </ul>
+        <div class="container">
+            <h2>Fitur Unggulan</h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <h3>Roleplay Realistis</h3>
+                    <p>Gameplay yang menekankan simulasi kehidupan nyata.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Ekonomi Seimbang</h3>
+                    <p>Sistem keuangan yang stabil dan adil untuk semua pemain.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Sistem Fraksi & Bisnis</h3>
+                    <p>Bergabung dengan fraksi atau jalankan bisnis sendiri.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Tim Admin Responsif</h3>
+                    <p>Admin selalu siap membantu dalam situasi darurat.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Bergabung -->
     <section id="join">
-        <h2>Bergabung dengan Kami</h2>
-        <p>Ikuti komunitas kami di Discord dan media sosial untuk update terbaru!</p>
-        <a href="https://discord.gg/yourdiscord" class="btn">Gabung Discord</a>
+        <div class="container">
+            <h2>Bergabung dengan Kami</h2>
+            <p>Ikuti komunitas kami di Discord dan media sosial untuk update terbaru!</p>
+            <a href="https://discord.gg/yourdiscord" class="btn">Gabung di Discord</a>
+        </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Central Java Roleplay. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
