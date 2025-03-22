@@ -1,14 +1,14 @@
-/* Reset dasar */
+/* Reset Dasar */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Gaya dasar */
+/* Body */
 body {
-    background-color: #1a1a1a;
+    background-color: #121212;
     color: #fff;
     text-align: center;
 }
@@ -25,21 +25,20 @@ header {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-}
-
-header h1 {
-    margin-bottom: 10px;
-    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav ul {
     list-style: none;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -47,39 +46,69 @@ nav ul li a {
     text-decoration: none;
     color: #ffcc00;
     font-size: 18px;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
     color: #fff;
 }
 
-/* Section */
-section {
-    padding: 100px 20px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-#home {
-    background: url('background.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
+/* Menu Hamburger */
+#hamburger {
+    display: none;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    cursor: pointer;
 }
 
-#home h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
+#hamburger span {
+    background: #ffcc00;
+    display: block;
+    height: 4px;
+    width: 30px;
+    margin: 5px 0;
+    transition: 0.3s;
 }
 
-#home p {
-    font-size: 18px;
-    margin-bottom: 20px;
+/* Responsif */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #222;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #hamburger {
+        display: flex;
+    }
+
+    #hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    #hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
 }
 
+/* Tombol */
 .btn {
     background-color: #ffcc00;
     color: #1a1a1a;
@@ -87,7 +116,6 @@ section {
     text-decoration: none;
     font-size: 18px;
     border-radius: 5px;
-    display: inline-block;
     transition: 0.3s;
 }
 
@@ -95,21 +123,7 @@ section {
     background-color: #e6b800;
 }
 
-/* Fitur */
-.features-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.feature-item {
-    background: #333;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-}
-
+/* Footer */
 footer {
     background-color: #222;
     padding: 15px 0;
