@@ -1,31 +1,45 @@
-// Toggle Menu untuk Mobile
-function toggleMenu() {
-    document.querySelector(".nav-links").classList.toggle("active");
-}
-
-// Toggle Dark Mode dengan Simpan Preferensi
-function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-    localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
-}
-
-// Menyimpan Preferensi Dark Mode
-window.onload = function() {
-    if (localStorage.getItem("darkMode") === "true") {
-        document.body.classList.add("dark-mode");
-    }
-};
-
-// Efek Smooth Scroll untuk Navigasi
-document.querySelectorAll("a[href^='#']").forEach(anchor => {
-    anchor.addEventListener("click", function(e) {
+// Smooth scrolling untuk navigasi
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
             window.scrollTo({
-                top: target.offsetTop - 50,
-                behavior: "smooth"
+                top: targetSection.offsetTop - 60,
+                behavior: 'smooth'
             });
         }
     });
 });
+
+// Efek scroll animasi
+const sections = document.querySelectorAll('section');
+
+const revealSection = () => {
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (sectionTop < windowHeight - 100) {
+            section.style.opacity = 1;
+            section.style.transform = "translateY(0)";
+        }
+    });
+};
+
+window.addEventListener('scroll', revealSection);
+document.addEventListener('DOMContentLoaded', revealSection);
+
+// Fetch jumlah pemain online (butuh API server SAMP)
+async function fetchPlayerCount() {
+    try {
+        let response = await fetch('https://api.samp-server.com/?ip=yourserverip&port=yourserverport');
+        let data = await response.json();
+        document.querySelector("#player-count span").textContent = data.players;
+    } catch (error) {
+        document.querySelector("#player-count span").textContent = "Tidak tersedia";
+    }
+}
+
+// Jalankan fungsi saat halaman dimuat
+fetchPlayerCount();
