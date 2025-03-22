@@ -1,4 +1,13 @@
-// Smooth scrolling untuk navigasi
+// Menu Hamburger
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    hamburger.classList.toggle("active");
+});
+
+// Smooth Scrolling
 document.querySelectorAll('nav ul li a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -13,24 +22,7 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     });
 });
 
-// Efek scroll animasi
-const sections = document.querySelectorAll('section');
-
-const revealSection = () => {
-    sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (sectionTop < windowHeight - 100) {
-            section.style.opacity = 1;
-            section.style.transform = "translateY(0)";
-        }
-    });
-};
-
-window.addEventListener('scroll', revealSection);
-document.addEventListener('DOMContentLoaded', revealSection);
-
-// Fetch jumlah pemain online (butuh API server SAMP)
+// Fetch Jumlah Pemain
 async function fetchPlayerCount() {
     try {
         let response = await fetch('https://api.samp-server.com/?ip=yourserverip&port=yourserverport');
@@ -41,5 +33,4 @@ async function fetchPlayerCount() {
     }
 }
 
-// Jalankan fungsi saat halaman dimuat
 fetchPlayerCount();
