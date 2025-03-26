@@ -1,5 +1,5 @@
-const serverIP = "123.456.789.000"; // Ganti dengan IP server SA-MP Anda
-const serverPort = "7777"; // Ganti dengan port server Anda
+const serverIP = "202.10.41.204"; // Ganti dengan IP server SA-MP Anda
+const serverPort = "7779"; // Ganti dengan port server Anda
 
 async function fetchPlayerCount() {
     try {
