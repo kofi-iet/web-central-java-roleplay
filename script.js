@@ -1,23 +1,21 @@
-// Menu Hamburger
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
+const serverIP = "123.456.789.000"; // Ganti dengan IP server SA-MP Anda
+const serverPort = "7777"; // Ganti dengan port server Anda
 
-hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-    hamburger.classList.toggle("active");
-});
-
-// Smooth Scrolling
-document.querySelectorAll('nav ul li a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-            window.scrollTo({
-                top: targetSection.offsetTop - 60,
-                behavior: 'smooth'
-            });
+async function fetchPlayerCount() {
+    try {
+        const response = await fetch(`https://api.samp-api.com/v1/status/${serverIP}:${serverPort}`);
+        const data = await response.json();
+        
+        if (data && data.online) {
+            document.getElementById('player-count').innerText = `${data.players} / ${data.maxPlayers}`;
+        } else {
+            document.getElementById('player-count').innerText = "Server Offline";
         }
-    });
-});
+    } catch (error) {
+        document.getElementById('player-count').innerText = "Gagal mengambil data";
+    }
+}
+
+// Ambil data pertama kali dan update setiap 10 detik
+fetchPlayerCount();
+setInterval(fetchPlayerCount, 10000);
